@@ -46,9 +46,9 @@ namespace Tasky.Core {
 				return db.Insert (item);
 		}
 		
-		public static int DeleteTask(int id)
+		public static int DeleteTask(Task item)
 		{
-			return db.Delete (id);
+			return db.Delete (item);
 		}
 	}
 }

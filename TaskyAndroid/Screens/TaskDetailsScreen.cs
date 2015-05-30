@@ -57,7 +57,7 @@ namespace TaskyAndroid.Screens {
 		void CancelDelete()
 		{
 			if (task.Id != 0) {
-				TaskManager.DeleteTask(task.Id);
+				TaskManager.DeleteTask(task);
 			}
 			Finish();
 		}

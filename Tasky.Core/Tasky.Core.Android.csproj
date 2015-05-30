@@ -51,12 +51,16 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Task.cs" />
     <Compile Include="TaskManager.cs" />
-    <Compile Include="SQLite.cs" />
-    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Database\SQLite.cs" />
+    <Compile Include="Database\SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Database\" />
   </ItemGroup>
 </Project>
