@@ -47,14 +47,25 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\portable-win+net40+sl40+wp7\Common.Logging.Core.dll</HintPath>
     </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\packages\SQLite.Net-PCL.3.0.5\lib\MonoAndroid\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroid">
+      <HintPath>..\packages\SQLite.Net-PCL.3.0.5\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions">
+      <HintPath>..\packages\SQLiteNetExtensions.1.3.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="TaskManager.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Database\SQLite.cs" />
     <Compile Include="Database\SQLiteAsync.cs" />
+    <Compile Include="DataAccess\TaskManager.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Order.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -62,5 +73,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Database\" />
+    <Folder Include="DataAccess\" />
   </ItemGroup>
 </Project>

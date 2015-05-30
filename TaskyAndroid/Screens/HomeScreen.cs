@@ -3,7 +3,8 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using Tasky.Core;
+using Tasky.Core.Models;
+using Tasky.Core.DataAccess;
 using TaskyAndroid;
 
 namespace TaskyAndroid.Screens {

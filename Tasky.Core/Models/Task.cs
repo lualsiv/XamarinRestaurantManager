@@ -1,7 +1,8 @@
 using System;
 using SQLite;
 
-namespace Tasky.Core {
+
+namespace Tasky.Core.Models {
 	/// <summary>
 	/// Task business object
 	/// </summary>

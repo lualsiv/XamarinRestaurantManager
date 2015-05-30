@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using SQLite;
+using System.Linq;
+using Tasky.Core.Models;
 
-namespace Tasky.Core {
+namespace Tasky.Core.DataAccess {
 	/// <summary>
 	/// Manager classes are an abstraction on the data access layers
 	/// </summary>
@@ -28,17 +30,10 @@ namespace Tasky.Core {
 			
 			var table = db.Table<Task> ();
 
-			//I am baffled by the fact that there is no built-in
-			//functionality for such a simple task.
-			var taskQuery = (from task in table
-			                 select task);
-
-			var result = new List<Task> ();
-			foreach (var task in taskQuery){
-				result.Add (task);
-			}
+			//Thank God for LINQ extensions
+			return (from task in table
+			        select task).ToList<Task> ();
 		
-			return result;
 		}
 		
 		public static int SaveTask (Task item)
