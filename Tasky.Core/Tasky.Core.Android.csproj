@@ -66,6 +66,8 @@
     <Compile Include="DataAccess\TaskManager.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="DataAccess\OrderManager.cs" />
+    <Compile Include="DataAccess\FoodManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

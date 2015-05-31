@@ -18,6 +18,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/NameLabel"
+        android:inputType="number"
         android:imeOptions="actionNext"
         android:maxLines="1" />
     <TextView
@@ -33,6 +34,10 @@
         android:layout_below="@+id/NotesLabel"
         android:maxLines="1"
         android:imeOptions="actionDone" />
+    <ListView
+        android:id="@+id/FoodList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/SaveButton"
         android:text="Save"

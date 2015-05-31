@@ -10,7 +10,7 @@ namespace Tasky.Core.DataAccess {
 	/// </summary>
 	public static class TaskManager {
 
-		//Yuck static...but I am lazy so...
+
 		static SQLiteConnection db;
 		static TaskManager ()
 		{

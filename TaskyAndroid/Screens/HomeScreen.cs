@@ -6,6 +6,7 @@ using Android.Widget;
 using Tasky.Core.Models;
 using Tasky.Core.DataAccess;
 using TaskyAndroid;
+using TaskyAndroid.Adapters;
 
 namespace TaskyAndroid.Screens {
 	/// <summary>
@@ -13,8 +14,8 @@ namespace TaskyAndroid.Screens {
 	/// </summary>
 	[Activity (Label = "Tasky", MainLauncher = true, Icon="@drawable/icon")]			
 	public class HomeScreen : Activity {
-		Adapters.TaskListAdapter taskList;
-		IList<Task> tasks;
+		OrderListAdapter taskList;
+		IList<Order> tasks;
 		Button addTaskButton;
 		ListView taskListView;
 		
@@ -44,16 +45,17 @@ namespace TaskyAndroid.Screens {
 					StartActivity (taskDetails);
 				};
 			}
+
 		}
 		
 		protected override void OnResume ()
 		{
 			base.OnResume ();
 
-			tasks = TaskManager.GetTasks();
+			tasks = OrderManager.GetOrders();
 			
 			// create our adapter
-			taskList = new Adapters.TaskListAdapter(this, tasks);
+			taskList = new Adapters.OrderListAdapter(this, tasks);
 
 			//Hook up our adapter to our ListView
 			taskListView.Adapter = taskList;
